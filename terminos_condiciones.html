@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Términos y Condiciones</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #5B4FC1 0%, #7C6FD6 100%);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #5B4FC1 0%, #7C6FD6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-black/60 flex items-center justify-center min-h-screen">
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black/60"></div>
+
+  <!-- Modal -->
+  <div class="relative bg-white max-w-3xl w-full mx-4 rounded-2xl shadow-2xl overflow-hidden z-10">
+
+    <!-- Header -->
+    <div class="gradient-bg p-6 text-white">
+      <h1 class="text-2xl font-bold">Términos y Condiciones</h1>
+      <p class="text-sm opacity-90">Última actualización: Enero 2026</p>
+    </div>
+
+    <!-- Content -->
+    <div class="p-6 space-y-4 text-gray-700 max-h-[65vh] overflow-y-auto">
+
+      <h2 class="text-lg font-semibold gradient-text">1. Aceptación de los términos</h2>
+      <p>
+        Al acceder y utilizar este sistema, el usuario acepta cumplir con los presentes
+        Términos y Condiciones. Si no está de acuerdo, deberá abstenerse de usar el servicio.
+      </p>
+
+      <h2 class="text-lg font-semibold gradient-text">2. Uso del servicio</h2>
+      <p>
+        El sistema está diseñado para la generación de reportes, análisis de datos y apoyo
+        administrativo. El uso indebido o con fines ilegales está estrictamente prohibido.
+      </p>
+
+      <h2 class="text-lg font-semibold gradient-text">3. Información y datos</h2>
+      <p>
+        Los datos ingresados por el usuario son responsabilidad exclusiva del mismo.
+        No garantizamos la exactitud de la información procesada si los datos son incorrectos.
+      </p>
+
+      <h2 class="text-lg font-semibold gradient-text">4. Privacidad</h2>
+      <p>
+        Nos comprometemos a proteger la información del usuario y no compartirla con terceros
+        sin autorización, salvo requerimiento legal.
+      </p>
+
+      <h2 class="text-lg font-semibold gradient-text">5. Modificaciones</h2>
+      <p>
+        Nos reservamos el derecho de modificar estos términos en cualquier momento.
+        Los cambios entrarán en vigencia una vez publicados.
+      </p>
+
+      <h2 class="text-lg font-semibold gradient-text">6. Responsabilidad</h2>
+      <p>
+        El servicio se ofrece “tal cual”. No nos responsabilizamos por pérdidas económicas,
+        decisiones comerciales o daños derivados del uso del sistema.
+      </p>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="p-4 bg-gray-100 flex justify-end">
+      <button onclick="cerrarModal()"
+        class="gradient-bg text-white px-6 py-2 rounded-xl font-semibold hover:opacity-90 transition">
+        Aceptar y cerrar
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Script -->
+  <script>
+    function cerrarModal() {
+      window.close();
+    }
+
+    // Cerrar al hacer clic fuera
+    document.getElementById("overlay").addEventListener("click", cerrarModal);
+  </script>
+
+</body>
+</html>
